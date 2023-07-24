@@ -26,10 +26,10 @@
                     </svg>
                     <svg class="fill-icon">
                         <use href="{{ asset('assets/svg/icon-sprite.svg#fill-widget') }}"></use>
-                    </svg><span>Katagori</span></a>
+                    </svg><span>Kategori</span></a>
                 <ul class="sidebar-submenu">
-                    <li><a href="{{route('Listeleme')}}">Katagori Listeleme</a></li>
-                    <li><a>Katagori Ekleme</a></li>
+                    <li><a href="{{route('Listeleme')}}">Kategori Listeleme</a></li>
+                    <li><a>Kategori Ekleme</a></li>
                 </ul>
             </li>
             <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="#">
