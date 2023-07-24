@@ -19,3 +19,10 @@ Route::get('/', function () {
 
 Route::view('index', 'index')->name('index');
 
+Route::prefix('Kategoriler')->group(function () {
+    Route::view('Listeleme', 'Kategoriler.Listeleme')->name('Listeleme');
+});
+
+Route::prefix('Yazi')->group(function () {
+    Route::view('create', 'Yazi.create')->name('create');
+});

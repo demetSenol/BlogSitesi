@@ -28,7 +28,7 @@
                         <use href="{{ asset('assets/svg/icon-sprite.svg#fill-widget') }}"></use>
                     </svg><span>Katagori</span></a>
                 <ul class="sidebar-submenu">
-                    <li><a>Katagori Listeleme</a></li>
+                    <li><a href="{{route('Listeleme')}}">Katagori Listeleme</a></li>
                     <li><a>Katagori Ekleme</a></li>
                 </ul>
             </li>
@@ -40,7 +40,7 @@
                     <use href="{{ asset('assets/svg/icon-sprite.svg#fill-widget') }}"></use>
                 </svg><span>Yazı</span></a>
             <ul class="sidebar-submenu">
-                <li><a>Yazı Listeleme</a></li>
+                <li><a href="{{route('create')}}">Yazı Ekleme</a></li>
                 <li><a>Yazı Onay İşlemi</a></li>
             </ul>
         </li>
