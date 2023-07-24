@@ -18,14 +18,58 @@
                 </svg>
                 <svg class="fill-icon">
                   <use href="{{ asset('assets/svg/icon-sprite.svg#fill-home') }}"></use>
-                </svg><span>Dashboard</span></a></li>
-            <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="https://pixelstrap.freshdesk.com/support/home" target="_blank">
+                </svg><span>Üyeler</span></a></li>
+
+                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="#">
+                    <svg class="stroke-icon">
+                        <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-widget') }}"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                        <use href="{{ asset('assets/svg/icon-sprite.svg#fill-widget') }}"></use>
+                    </svg><span>Katagori</span></a>
+                <ul class="sidebar-submenu">
+                    <li><a>Katagori Listeleme</a></li>
+                    <li><a>Katagori Ekleme</a></li>
+                </ul>
+            </li>
+            <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="#">
                 <svg class="stroke-icon">
-                  <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-social') }}"></use>
+                    <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-widget') }}"></use>
                 </svg>
                 <svg class="fill-icon">
-                  <use href="{{ asset('assets/svg/icon-sprite.svg#fill-social') }}"></use>
-                </svg><span>Raise Support</span></a></li>
+                    <use href="{{ asset('assets/svg/icon-sprite.svg#fill-widget') }}"></use>
+                </svg><span>Yazı</span></a>
+            <ul class="sidebar-submenu">
+                <li><a>Yazı Listeleme</a></li>
+                <li><a>Yazı Onay İşlemi</a></li>
+            </ul>
+        </li>
+
+        <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="#">
+            <svg class="stroke-icon">
+                <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-widget') }}"></use>
+            </svg>
+            <svg class="fill-icon">
+                <use href="{{ asset('assets/svg/icon-sprite.svg#fill-widget') }}"></use>
+            </svg><span>Galeri</span></a>
+        <ul class="sidebar-submenu">
+            <li><a>Üye Resimleri</a></li>
+            <li><a>Yazı Resimleri</a></li>
+        </ul>
+    </li>
+
+    <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="#">
+        <svg class="stroke-icon">
+            <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-widget') }}"></use>
+        </svg>
+        <svg class="fill-icon">
+            <use href="{{ asset('assets/svg/icon-sprite.svg#fill-widget') }}"></use>
+        </svg><span>Yorumlar</span></a>
+    <ul class="sidebar-submenu">
+        <li><a>Onaylı Yorumlar</a></li>
+        <li><a>Onaysız Yorumlar</a></li>
+    </ul>
+</li>
             <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="https://docs.pixelstrap.com/cuba/laravel/document/" target="_blank">
                 <svg class="stroke-icon">
                   <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-form') }}"></use>
