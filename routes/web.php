@@ -26,3 +26,7 @@ Route::prefix('Kategoriler')->group(function () {
 Route::prefix('Yazi')->group(function () {
     Route::view('create', 'Yazi.create')->name('create');
 });
+
+Route::prefix('Uyeler')->group(function () {
+    Route::view('uyeListesi', 'Uyeler.uyeListesi')->name('uyeListesi');
+});
