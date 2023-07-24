@@ -21,8 +21,14 @@ Route::view('index', 'index')->name('index');
 
 Route::prefix('Kategoriler')->group(function () {
     Route::view('Listeleme', 'Kategoriler.Listeleme')->name('Listeleme');
+    Route::view('Ekleme', 'Kategoriler.Ekleme')->name('Ekleme');
 });
 
 Route::prefix('Yazi')->group(function () {
     Route::view('create', 'Yazi.create')->name('create');
+});
+
+Route::prefix('Yorumlar')->group(function () {
+    Route::view('Onayli', 'Yorumlar.Onayli')->name('Onayli');
+    Route::view('Onaysiz', 'Yorumlar.Onaysiz')->name('Onaysiz');
 });

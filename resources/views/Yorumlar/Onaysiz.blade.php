@@ -8,12 +8,12 @@
 @endsection
 
 @section('breadcrumb-title')
-<h3>Onaylı Yorumlar</h3>
+<h3>Onaysız Yorumlar</h3>
 @endsection
 
 @section('breadcrumb-items')
 <li class="breadcrumb-item">Yorumlar</li>
-<li class="breadcrumb-item active">Onaylı Yorumlar</li>
+<li class="breadcrumb-item active">Onaysiz Yorumlar</li>
 @endsection
 
 @section('content')
@@ -23,16 +23,19 @@
                 <div class="card">
                   <div class="table-responsive">
                     <table class="table">
+                        <div class="card-footer text-end">
+                            <button class="btn btn-primary" type="submit">Kaydet</button>
+                          </div>
                       <thead>
                         <tr class="border-bottom-primary">
-                          <th scope="col">Id</th>
-                          <th scope="col">Üye Adı</th>
-                          <th scope="col">Yazı Adı</th>
-                          <th scope="col">Yorum</th>
-                          <th scope="col">Status</th>
-                          <th scope="col">Onay</th>
-                          <th scope="col">Tarihi</th>
-                        </tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Üye Adı</th>
+                            <th scope="col">Yazı Adı</th>
+                            <th scope="col">Yorum</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Onay</th>
+                            <th scope="col">Tarihi</th>
+                          </tr>
                       </thead>
                       <tbody>
                         <tr class="border-bottom-secondary">
@@ -109,6 +112,5 @@
         </div>
     </div>
 @endsection
-
 @section('script')
 @endsection

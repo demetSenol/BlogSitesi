@@ -18,7 +18,7 @@
                 </svg>
                 <svg class="fill-icon">
                   <use href="{{ asset('assets/svg/icon-sprite.svg#fill-home') }}"></use>
-                </svg><span>Üyeler</span></a></li>
+                </svg><span>Dashboard</span></a></li>
 
                 <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="#">
                     <svg class="stroke-icon">
@@ -29,7 +29,7 @@
                     </svg><span>Kategori</span></a>
                 <ul class="sidebar-submenu">
                     <li><a href="{{route('Listeleme')}}">Kategori Listeleme</a></li>
-                    <li><a>Kategori Ekleme</a></li>
+                    <li><a href="{{route('Ekleme')}}">Kategori Ekleme</a></li>
                 </ul>
             </li>
             <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="#">
@@ -66,8 +66,8 @@
             <use href="{{ asset('assets/svg/icon-sprite.svg#fill-widget') }}"></use>
         </svg><span>Yorumlar</span></a>
     <ul class="sidebar-submenu">
-        <li><a>Onaylı Yorumlar</a></li>
-        <li><a>Onaysız Yorumlar</a></li>
+        <li><a href="{{route('Onayli')}}">Onaylı Yorumlar</a></li>
+        <li><a href="{{route('Onaysiz')}}">Onaysız Yorumlar</a></li>
     </ul>
 </li>
             <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="https://docs.pixelstrap.com/cuba/laravel/document/" target="_blank">
