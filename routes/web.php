@@ -24,5 +24,11 @@ Route::prefix('Kategoriler')->group(function () {
 });
 
 Route::prefix('Yazi')->group(function () {
+    Route::view('index', 'Yazi.index')->name('index');
+    Route::view('Onay', 'Yazi.Onay')->name('Onay');
     Route::view('create', 'Yazi.create')->name('create');
+     Route::view('details', 'Yazi.details')->name('details');
+
 });
+
+

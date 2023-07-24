@@ -26,9 +26,9 @@
                     </svg>
                     <svg class="fill-icon">
                         <use href="{{ asset('assets/svg/icon-sprite.svg#fill-widget') }}"></use>
-                    </svg><span>Katagori</span></a>
+                    </svg><span>Kategori</span></a>
                 <ul class="sidebar-submenu">
-                    <li><a href="{{route('Listeleme')}}">Katagori Listeleme</a></li>
+                    <li><a href="{{route('Listeleme')}}">Kategori Listeleme</a></li>
                     <li><a>Katagori Ekleme</a></li>
                 </ul>
             </li>
@@ -41,7 +41,9 @@
                 </svg><span>Yazı</span></a>
             <ul class="sidebar-submenu">
                 <li><a href="{{route('create')}}">Yazı Ekleme</a></li>
-                <li><a>Yazı Onay İşlemi</a></li>
+                <li><a href="{{route('details')}}">Detay</a></li>
+                <li ><a href="{{route('index')}}">Yazı Listesi</a></li>
+                <li><a href="{{route('Onay')}}">Yazı Onay İşlemi</a></li>
             </ul>
         </li>
 
