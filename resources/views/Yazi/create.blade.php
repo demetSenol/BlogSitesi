@@ -10,12 +10,12 @@
 @endsection
 
 @section('breadcrumb-title')
-<h3>Add Post</h3>
+<h3>Yazı Ekleme</h3>
 @endsection
 
 @section('breadcrumb-items')
-<li class="breadcrumb-item">Blog</li>
-<li class="breadcrumb-item active">Add Post</li>
+<li class="breadcrumb-item">Yazı</li>
+<li class="breadcrumb-item active">Yazı Ekleme</li>
 @endsection
 
 @section('content')
@@ -24,7 +24,7 @@
 	  <div class="col-sm-12">
 		<div class="card">
 		  <div class="card-header">
-			<h5>Post Edit</h5>
+			<h5>Yazı Ekleme</h5>
 		  </div>
 		  <div class="card-body add-post">
 			<form class="row needs-validation" novalidate="">

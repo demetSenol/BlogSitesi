@@ -21,12 +21,27 @@ Route::view('index', 'index')->name('index');
 
 Route::prefix('Kategoriler')->group(function () {
     Route::view('Listeleme', 'Kategoriler.Listeleme')->name('Listeleme');
+    Route::view('Ekleme', 'Kategoriler.Ekleme')->name('Ekleme');
 });
 
 Route::prefix('Yazi')->group(function () {
+    Route::view('index', 'Yazi.index')->name('index');
+    Route::view('Onay', 'Yazi.Onay')->name('Onay');
     Route::view('create', 'Yazi.create')->name('create');
+     Route::view('details', 'Yazi.details')->name('details');
+
 });
 
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+Route::prefix('Yorumlar')->group(function () {
+    Route::view('Onayli', 'Yorumlar.Onayli')->name('Onayli');
+    Route::view('Onaysiz', 'Yorumlar.Onaysiz')->name('Onaysiz');
+=======
 Route::prefix('Uyeler')->group(function () {
     Route::view('uyeListesi', 'Uyeler.uyeListesi')->name('uyeListesi');
+>>>>>>> ce8fb8852092ee48a4ba7e6370bb1bff85cb6008
 });
+>>>>>>> 8cc413ff9f4279de0e10cd554a95c24df9ea5c12

@@ -19,7 +19,27 @@
                 </svg>
                 <svg class="fill-icon">
                   <use href="{{ asset('assets/svg/icon-sprite.svg#fill-home') }}"></use>
+<<<<<<< HEAD
+                </svg><span>Dashboard</span></a></li>
+
+                <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="#">
+                    <svg class="stroke-icon">
+                        <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-widget') }}"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                        <use href="{{ asset('assets/svg/icon-sprite.svg#fill-widget') }}"></use>
+                    </svg><span>Kategori</span></a>
+                <ul class="sidebar-submenu">
+                    <li><a href="{{route('Listeleme')}}">Kategori Listeleme</a></li>
+<<<<<<< HEAD
+                    <li><a>Katagori Ekleme</a></li>
+=======
+                    <li><a href="{{route('Ekleme')}}">Kategori Ekleme</a></li>
+>>>>>>> 8cc413ff9f4279de0e10cd554a95c24df9ea5c12
+                </ul>
+=======
                 </svg><span>Yönetim Merkezi</span></a>
+>>>>>>> ce8fb8852092ee48a4ba7e6370bb1bff85cb6008
             </li>
 
             <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="#">
@@ -31,7 +51,9 @@
                 </svg><span>Yazı</span></a>
             <ul class="sidebar-submenu">
                 <li><a href="{{route('create')}}">Yazı Ekleme</a></li>
-                <li><a>Yazı Onay İşlemi</a></li>
+                <li><a href="{{route('details')}}">Detay</a></li>
+                <li ><a href="{{route('index')}}">Yazı Listesi</a></li>
+                <li><a href="{{route('Onay')}}">Yazı Onay İşlemi</a></li>
             </ul>
         </li>
 
@@ -84,6 +106,21 @@
                 </ul>
             </li>
 
+<<<<<<< HEAD
+    <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="#">
+        <svg class="stroke-icon">
+            <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-widget') }}"></use>
+        </svg>
+        <svg class="fill-icon">
+            <use href="{{ asset('assets/svg/icon-sprite.svg#fill-widget') }}"></use>
+        </svg><span>Yorumlar</span></a>
+    <ul class="sidebar-submenu">
+        <li><a href="{{route('Onayli')}}">Onaylı Yorumlar</a></li>
+        <li><a href="{{route('Onaysiz')}}">Onaysız Yorumlar</a></li>
+    </ul>
+</li>
+=======
+>>>>>>> ce8fb8852092ee48a4ba7e6370bb1bff85cb6008
             <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="https://docs.pixelstrap.com/cuba/laravel/document/" target="_blank">
                 <svg class="stroke-icon">
                   <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-form') }}"></use>
