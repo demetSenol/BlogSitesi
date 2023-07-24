@@ -28,7 +28,12 @@ Route::prefix('Yazi')->group(function () {
     Route::view('create', 'Yazi.create')->name('create');
 });
 
+<<<<<<< HEAD
 Route::prefix('Yorumlar')->group(function () {
     Route::view('Onayli', 'Yorumlar.Onayli')->name('Onayli');
     Route::view('Onaysiz', 'Yorumlar.Onaysiz')->name('Onaysiz');
+=======
+Route::prefix('Uyeler')->group(function () {
+    Route::view('uyeListesi', 'Uyeler.uyeListesi')->name('uyeListesi');
+>>>>>>> ce8fb8852092ee48a4ba7e6370bb1bff85cb6008
 });

@@ -11,12 +11,12 @@
 @endsection
 
 @section('breadcrumb-title')
-    <h3>Default</h3>
+    <h3>Yönetim Merkezi</h3>
 @endsection
 
 @section('breadcrumb-items')
-    <li class="breadcrumb-item">Dashboard</li>
-    <li class="breadcrumb-item active">Default</li>
+    <li class="breadcrumb-item">Yönetim Merkezi</li>
+    <li class="breadcrumb-item active">Varsayılan </li>
 @endsection
 
 @section('content')
