@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('yazi', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('kategoriID');
-            $table->bigInteger('uyeID');
+            $table->bigInteger('kategoriID')->unsigned();
+            $table->bigInteger('uyeID')->unsigned();
             $table->string('baslik');
             $table->text('icerik');
             $table->integer('durum')->default(0);
@@ -27,13 +27,12 @@ return new class extends Migration
 
         Schema::create('yazi_resim', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('yaziID');
-            $table->bigInteger('uyeID');
+            $table->bigInteger('yaziID')->unsigned();
             $table->string('resimAdi');
             $table->text('resimUrl');
             $table->timestamps();
-            $table->foreign('yaziID')->references('id')->on('yazi ')->onDelete('cascade');
-            $table->foreign('uyeID')->references('id')->on('uye')->onDelete('cascade');
+            $table->foreign('yaziID')->references('id')->on('yazi')->onDelete('cascade');
+
         });
     }
 
@@ -44,6 +43,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('yazis');
+        Schema::dropIfExists('yazi');
+        Schema::dropIfExists('yazi_resim');
     }
 };

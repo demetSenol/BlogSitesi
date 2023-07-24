@@ -27,8 +27,6 @@ return new class extends Migration
             $table->bigInteger('uyeId')->unsigned();
             $table->string('resim');
             $table->timestamps();
-
-
             $table->foreign('uyeId')->references('id')->on('uye')->onDelete('cascade');
         });
     }
