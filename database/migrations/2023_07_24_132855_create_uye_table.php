@@ -20,16 +20,16 @@ return new class extends Migration
             $table->string('eposta');
             $table->string('kullaniciAdi',50);
             $table->string('sifre',50);
-            $table->string('resimId');
             $table->timestamps();
         });
         Schema::create('uyeResim', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('uyeId');
+            $table->bigInteger('uyeId')->unsigned();
             $table->string('resim');
             $table->timestamps();
 
-            $table->foreign('uyeId')->referance('id')->on('uye')->onDelete();
+
+            $table->foreign('uyeId')->references('id')->on('uye')->onDelete('cascade');
         });
     }
 
@@ -41,5 +41,6 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('uye');
+        Schema::dropIfExists('uyeResim');
     }
 };
