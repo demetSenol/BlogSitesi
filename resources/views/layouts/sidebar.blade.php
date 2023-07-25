@@ -85,7 +85,6 @@
             </svg><span>Kategori</span></a>
         <ul class="sidebar-submenu">
             <li><a href="{{route('Listeleme')}}">Kategori Listeleme</a></li>
-            <li><a>Katagori Ekleme</a></li>
             <li><a href="{{route('Ekleme')}}">Kategori Ekleme</a></li>
 
         </ul>
