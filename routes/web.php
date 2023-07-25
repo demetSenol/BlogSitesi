@@ -19,6 +19,10 @@ Route::get('/', function () {
 
 Route::view('index', 'index')->name('index');
 
+
+Route::view('uyeRegister', 'uyeRegister')->name('uyeRegister');
+
+
 Route::prefix('Kategoriler')->group(function () {
     Route::view('Listeleme', 'Kategoriler.Listeleme')->name('Listeleme');
     Route::view('Ekleme', 'Kategoriler.Ekleme')->name('Ekleme');
@@ -40,4 +44,5 @@ Route::prefix('Yorumlar')->group(function () {
 Route::prefix('Uyeler')->group(function () {
     Route::view('uyeListesi', 'Uyeler.uyeListesi')->name('uyeListesi');
 });
+
 
