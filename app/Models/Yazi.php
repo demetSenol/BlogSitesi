@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Yazi extends Model
 {
     use HasFactory;
+    protected $table="yazi";
+    protected $fillable = [];
+
 }

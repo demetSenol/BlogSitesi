@@ -40,15 +40,16 @@
                                     <th>İşlemler</th>
                                 </tr>
                             </thead>
+                           @foreach ($yazi as $yazi)
                             <tbody>
                                 <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
+                                    <td>{{ $yazi->baslik }}</td>
+                                    <td>{{ $yazi->icerik }}</td>
                                     <td> <img class="img-fluid table-avtar" src="{{ asset('assets/images/user/1.jpg') }}"
                                             alt="profile"></td>
-                                    <td>61</td>
-                                    <td>2011/04/25</td>
-                                    <td>$320,800</td>
+                                    <td>{{ $yazi->uye.ad }}</td>
+                                    <td>{{ $yazi->kategori.kategoriAdi}}</td>
+                                    <td>{{ $yazi->created_at }}</td>
                                     <td>
                                         <ul class="action">
                                             <li class="edit"> <a href="#"><i
@@ -59,6 +60,7 @@
                                     </td>
                                 </tr>
                             </tbody>
+                            @endforeach
                             <tfoot>
                                 <tr>
                                     <th>Name</th>

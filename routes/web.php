@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\YaziController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,19 +19,22 @@ Route::get('/', function () {
 })->name('/');
 
 Route::view('index', 'index')->name('index');
+Route::view('deneme', 'deneme')->name('deneme');
+// Route::view('yazi', 'yazi.create')->name('create');
 
 Route::prefix('Kategoriler')->group(function () {
     Route::view('Listeleme', 'Kategoriler.Listeleme')->name('Listeleme');
     Route::view('Ekleme', 'Kategoriler.Ekleme')->name('Ekleme');
 });
 
-Route::prefix('Yazi')->group(function () {
-    Route::view('listele', 'Yazi.listele')->name('listele');
-    Route::view('Onay', 'Yazi.Onay')->name('Onay');
-    Route::view('create', 'Yazi.create')->name('create');
-     Route::view('details', 'Yazi.details')->name('details');
+Route::resource('yazi', YaziController::class);
+// Route::prefix('Yazi')->group(function () {
+//     Route::view('listele', 'Yazi.listele')->name('listele');
+//     Route::view('Onay', 'Yazi.Onay')->name('Onay');
+//     Route::view('create', 'Yazi.create')->name('create');
+//      Route::view('details', 'Yazi.details')->name('details');
 
-});
+// });
 
 
 Route::prefix('Yorumlar')->group(function () {
