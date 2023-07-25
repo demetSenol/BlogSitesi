@@ -37,6 +37,10 @@ Route::prefix('Yorumlar')->group(function () {
     Route::view('Onayli', 'Yorumlar.Onayli')->name('Onayli');
     Route::view('Onaysiz', 'Yorumlar.Onaysiz')->name('Onaysiz');
 });
+
 Route::prefix('Uyeler')->group(function () {
     Route::view('uyeListesi', 'Uyeler.uyeListesi')->name('uyeListesi');
 });
+
+
+
