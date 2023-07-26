@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\YaziController;
 
 /*
 |--------------------------------------------------------------------------
@@ -9,45 +9,23 @@ use App\Http\Controllers\YaziController;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
 |
 */
 
 Route::get('/', function () {
-    return redirect()->route('index');
-})->name('/');
-
-Route::view('index', 'index')->name('index');
-Route::view('deneme', 'deneme')->name('deneme');
-// Route::view('yazi', 'yazi.create')->name('create');
-
-
-Route::view('uyeRegister', 'uyeRegister')->name('uyeRegister');
-
-
-Route::prefix('Kategoriler')->group(function () {
-    Route::view('Listeleme', 'Kategoriler.Listeleme')->name('Listeleme');
-    Route::view('Ekleme', 'Kategoriler.Ekleme')->name('Ekleme');
+    return view('welcome');
 });
 
-Route::resource('yazi', YaziController::class);
-// Route::prefix('Yazi')->group(function () {
-//     Route::view('listele', 'Yazi.listele')->name('listele');
-//     Route::view('Onay', 'Yazi.Onay')->name('Onay');
-//     Route::view('create', 'Yazi.create')->name('create');
-//      Route::view('details', 'Yazi.details')->name('details');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-// });
-
-
-Route::prefix('Yorumlar')->group(function () {
-    Route::view('Onayli', 'Yorumlar.Onayli')->name('Onayli');
-    Route::view('Onaysiz', 'Yorumlar.Onaysiz')->name('Onaysiz');
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::prefix('Uyeler')->group(function () {
-    Route::view('uyeListesi', 'Uyeler.uyeListesi')->name('uyeListesi');
-});
-
-
+require __DIR__.'/auth.php';
