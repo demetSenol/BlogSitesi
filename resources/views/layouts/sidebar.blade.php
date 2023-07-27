@@ -89,9 +89,6 @@
 
         </ul>
 
-
-
-
     <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="#">
         <svg class="stroke-icon">
             <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-widget') }}"></use>
