@@ -2,7 +2,12 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
+
 use App\Http\Controllers\YaziController;
+
+use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\YorumController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,5 +44,26 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+
 require __DIR__.'/auth.php';
+
 Route::resource('yazi', YaziController::class);
+
+
+ Route::resource('kategori', KategoriController::class);
+
+
+
+ Route::resource('Yorum', YorumController::class);
+
+
+
+// Route::prefix('Kategoriler')->namespace('Kategoriler')->name('Kategoriler.')->group(function () {
+//         Route::get('/', [KategoriController::class, 'listeleme'])->name('listeleme');
+//         Route::get('/ekle', [KategoriController::class, 'ekleme'])->name('ekleme');
+//         Route::post('/ekle', [KategoriController::class, 'store'])->name('kategori.post');
+//     });
+
+
+
