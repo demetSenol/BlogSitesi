@@ -36,6 +36,7 @@
       <!-- Page Header Start-->
       @include('layouts.header')
       <!-- Page Header Ends  -->
+
       <!-- Page Body Start-->
       <div class="page-body-wrapper">
         <!-- Page Sidebar Start-->
@@ -66,7 +67,6 @@
         </div>
         <!-- footer start-->
         @include('layouts.footer')
-
       </div>
     </div>
     <!-- latest jquery-->

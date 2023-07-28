@@ -31,9 +31,9 @@
                     <use href="{{ asset('assets/svg/icon-sprite.svg#fill-widget') }}"></use>
                 </svg><span>Yazı</span></a>
             <ul class="sidebar-submenu">
-                {{-- <li><a href="{{route('yazi.create')}}">Yazı Ekleme</a></li> --}}
+                <li><a  href="{{ route('yazi.edit', ['yazi' => $id]) }}">Yazı Ekleme</a></li>
                 {{-- <li><a href="{{route('yazi.details')}}">Detay</a></li> --}}
-                {{-- <li ><a href="{{route('yazi.index')}}">Yazı Listesi</a></li> --}}
+                <li ><a href="{{route('yazi.index')}}">Yazı Listesi</a></li>
                 {{-- <li><a href="{{route('yazi.Onay')}}">Yazı Onay İşlemi</a></li> --}}
             </ul>
         </li>

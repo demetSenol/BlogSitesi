@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Yazi;
+use App\Models\Kategori;
 
 class YaziController extends Controller
 {
@@ -26,8 +27,8 @@ class YaziController extends Controller
      */
     public function create()
     {
-      // Veri ekleme sayfasını görüntüleme işlemi
-      return view('yazi.create');
+        $kategoriler = Kategori::all(); // Tüm kategorileri ekleme formunda göstermek için alıyoruz
+        return view('dashboard', compact('kategoriler'));
     }
 
     /**
@@ -38,7 +39,20 @@ class YaziController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'baslik' => 'required|string|max:255',
+            'icerik' => 'required|string',
+            'kategoriID' => 'required|array',
+        ]);
+
+          // Formdan gelen verilerle yeni yazı oluşturma işlemleri burada yapılır
+          $yazi = new Yazi();
+          $yazi->baslik = $request->input('baslik');
+          $yazi->icerik = $request->input('icerik');
+          $yazi->kategoriID = $request->input('kategoriID');
+          $yazi->save();
+
+          return redirect()->route('yazi.index')->with('success', 'Yeni yazı başarıyla oluşturuldu.');
     }
 
     /**
@@ -60,7 +74,9 @@ class YaziController extends Controller
      */
     public function edit($id)
     {
-        //
+        $yazi = Yazi::findOrFail($id);
+        return view('yazi.edit', compact('yazi'));
+
     }
 
     /**
@@ -72,7 +88,15 @@ class YaziController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $yazi = Yazi::findOrFail($id);
+
+        // Veri güncelleme işlemleri burada yapılır
+         $yazi->baslik = $request->baslik;
+        $yazi->icerik = $request->icerik;
+
+          $yazi->save();
+
+        return redirect()->route('yazi.index')->with('success', 'Yazı başarıyla güncellendi.');
     }
 
     /**
