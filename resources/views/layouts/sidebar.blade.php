@@ -84,8 +84,8 @@
                 <use href="{{ asset('assets/svg/icon-sprite.svg#fill-widget') }}"></use>
             </svg><span>Kategori</span></a>
         <ul class="sidebar-submenu">
-            {{-- <li><a href="{{route('Listeleme')}}">Kategori Listeleme</a></li>
-            <li><a href="{{route('Ekleme')}}">Kategori Ekleme</a></li> --}}
+             <li><a href="{{route('kategori.index')}}">Kategori Listeleme</a></li>
+            <li><a href="{{route('kategori.create')}}">Kategori Ekleme</a></li>
 
         </ul>
 
@@ -97,8 +97,8 @@
             <use href="{{ asset('assets/svg/icon-sprite.svg#fill-widget') }}"></use>
         </svg><span>Yorumlar</span></a>
     <ul class="sidebar-submenu">
-        {{-- <li><a href="{{route('Onayli')}}">Onaylı Yorumlar</a></li>
-        <li><a href="{{route('Onaysiz')}}">Onaysız Yorumlar</a></li> --}}
+         {{--  <li><a href="{{route('yorum.Onaylı')}}">Onaylı Yorumlar</a></li>
+        <li><a href="{{route('yorum.Onaysiz')}}">Onaysız Yorumlar</a></li>  --}}
     </ul>
 </li>
 
